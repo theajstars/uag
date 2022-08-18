@@ -1,0 +1,11 @@
+.event-card {
+  margin-top: 20px;
+  height: 310px;
+}
+.event-row {
+  width: 100%;
+}
+.event-details {
+  justify-content: space-between;
+  width: 100%;
+}

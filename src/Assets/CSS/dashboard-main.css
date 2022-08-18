@@ -1,0 +1,40 @@
+.dashboard-main-card {
+  height: 440px;
+  width: 100%;
+}
+.dashboard-main-left {
+  padding: 10px 0px;
+  justify-content: space-between;
+  height: 100%;
+  width: 30%;
+}
+.dashboard-main-item {
+  border-bottom: 1px solid #bdbcbc;
+  padding: 4px 8px;
+  text-align: center;
+}
+.dashboard-main-item:last-child {
+  border: none;
+}
+.dashboard-main-item .card-header {
+  font-size: 19px;
+}
+.dashboard-main-right {
+  width: 70%;
+}
+.dashboard-main-right-nav {
+  height: 18%;
+  background-color: rgb(88, 87, 87);
+  justify-content: space-between;
+  padding: 0px 40px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.dashboard-main-right-nav-item {
+  font-family: "Poppins", sans-serif;
+  color: #e6e6e6;
+}
+.dashboard-main-right-image {
+  height: 82%;
+  width: -webkit-fill-available;
+}

@@ -1,0 +1,8 @@
+.todo-card {
+  height: 350px;
+}
+.todo-row {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}

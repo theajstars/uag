@@ -1,0 +1,21 @@
+.document-card {
+  margin-top: 20px;
+  width: 55%;
+}
+.documents {
+  justify-content: space-between;
+}
+.document {
+  align-items: center;
+  border-bottom: 1px solid #bdbcbc;
+  padding: 10px 0px;
+}
+.document-icon {
+  color: rgb(184, 55, 55);
+  font-size: 35px;
+}
+.document-name {
+  font-family: "Jost", sans-serif;
+  margin-left: 35px;
+  font-size: 17px;
+}

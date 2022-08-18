@@ -1,0 +1,29 @@
+.profile-card {
+  height: 140px;
+  box-sizing: border-box;
+}
+.profile-name {
+  color: rgb(184, 55, 55);
+  font-weight: 400 !important;
+}
+.avatar {
+  height: inherit;
+  padding: 0px;
+}
+.profile-card-right {
+  padding: 15px 10px;
+  justify-content: space-between;
+}
+.progress-bar-container {
+  background-color: #ececec;
+  height: 7px;
+  box-sizing: border-box;
+  width: -webkit-fill-available;
+  /* width: 220px; */
+  margin-top: 2px;
+}
+.progress-bar {
+  background-color: #3973ac;
+  width: 80%;
+  height: inherit;
+}

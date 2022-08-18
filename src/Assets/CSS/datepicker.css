@@ -1,0 +1,52 @@
+.datepicker-container {
+  margin-top: 20px;
+}
+
+.date-display {
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  width: 100%;
+  height: 80px;
+  background-color: gray;
+  color: #fcfcfc;
+}
+.datepicker {
+  width: 100%;
+  padding: 20px;
+}
+.date-row {
+  justify-content: space-between;
+}
+.date-column {
+  justify-content: space-between;
+  height: 200px;
+}
+.weekday {
+  font-size: 13px;
+  color: rgb(121, 118, 118);
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.date-item {
+  color: rgb(184, 55, 55);
+  font-family: "Jost", sans-serif;
+  width: 35px;
+  height: 35px;
+}
+.date-danger,
+.date-warning {
+  color: #fcfcfc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.date-danger {
+  background-color: rgb(236, 43, 43);
+}
+.date-warning {
+  background-color: #ced116;
+}

@@ -1,0 +1,14 @@
+.meeting-card {
+  margin: 20px 0px;
+  height: 280px;
+}
+.meeting {
+  width: 100%;
+  padding: 10px 0px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #bdbcbc;
+}
+.meeting-details {
+  align-items: flex-end;
+}
