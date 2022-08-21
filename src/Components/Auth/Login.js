@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -11,8 +12,10 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import User from "../../Assets/JSON/User.json";
 import { message } from "antd";
-
+import Cookies from "js-cookie";
+import { Navigate } from "react-router-dom";
 export default function Login() {
+  const [user, setUser] = useState(false);
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -23,11 +26,14 @@ export default function Login() {
       message.error("Incorrect login details!");
     } else {
       message.success("User successfully logged in!");
+      Cookies.set("token", true);
+      setUser(true);
     }
   };
 
   return (
     <>
+      {user && <Navigate to="/dashboard" replace={true} />}
       <div className="login-form-container">
         <Box
           sx={{

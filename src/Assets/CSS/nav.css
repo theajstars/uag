@@ -47,3 +47,21 @@
   top: 40px;
   right: 20px;
 }
+.profile-nav {
+  position: absolute;
+  top: 45px;
+  right: 40px;
+}
+.profile-nav-icon {
+  font-size: 20px;
+  border: 1px solid rgba(133, 132, 132, 0.541);
+  background-color: rgb(133, 132, 132);
+  color: #fcfcfc;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;
+}

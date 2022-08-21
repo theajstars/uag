@@ -1,7 +1,32 @@
 import React, { useState } from "react";
 import Logo from "../Assets/IMG/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Dropdown, Menu } from "antd";
+import Cookies from "js-cookie";
 export default function Navbar() {
+  let navigate = useNavigate();
+  const logoutUser = () => {
+    Cookies.remove("token");
+    navigate("/login", { replace: true });
+  };
+  const menu = (
+    <Menu
+      items={[
+        {
+          key: "1",
+          label: <Link to="/dashboard">My Profile</Link>,
+        },
+        {
+          key: "2",
+          label: (
+            <span onClick={logoutUser}>
+              Logout &nbsp; <i className="far fa-power-off"></i>
+            </span>
+          ),
+        },
+      ]}
+    />
+  );
   const [isMenuOpen, setMenuOpen] = useState(true);
 
   return (
@@ -48,6 +73,13 @@ export default function Navbar() {
           </Link>
         </div>
       </div>
+      <span className="profile-nav">
+        <Dropdown overlay={menu} placement="bottom">
+          <span className="profile-nav-icon">
+            <i className="fal fa-user"></i>
+          </span>
+        </Dropdown>
+      </span>
     </>
   );
 }

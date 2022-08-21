@@ -43,10 +43,11 @@
   }
   div.nav-items {
     width: 60%;
+    margin-right: 90px;
   }
 }
 
-@media screen and (max-width: 801px) {
+@media screen and (max-width: 1000px) {
   div.nav-buttons {
     display: flex;
   }
@@ -64,6 +65,11 @@
     width: 260px;
     height: 100vh;
     background-color: #fcfcfc;
+    margin-right: 0px !important;
+  }
+  span.profile-nav {
+    right: 90px;
+    top: 40px;
   }
 }
 @media screen and (max-width: 701px) {
