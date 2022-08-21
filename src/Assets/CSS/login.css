@@ -1,0 +1,9 @@
+.login-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 40px;
+}
