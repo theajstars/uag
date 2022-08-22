@@ -6,21 +6,21 @@ export default function DashboardMain() {
     <div className="card-default dashboard-main-card flex-row">
       <div className="dashboard-main-left flex-column">
         <div className="dashboard-main-item flex-column">
-          <span class="card-header">Freedom Plaza Development</span>
+          <span className="card-header">Freedom Plaza Development</span>
           <span className="card-text card-text-small">
             The Freedom Plaza Development...
           </span>
           <MoreButton />
         </div>
         <div className="dashboard-main-item flex-column">
-          <span class="card-header">New Employees</span>
+          <span className="card-header">New Employees</span>
           <span className="card-text card-text-small">
             The group is always looking for new, young talent. And as su...
           </span>
           <MoreButton />
         </div>
         <div className="dashboard-main-item flex-column">
-          <span class="card-header">Mr Tilahun on Covid-19</span>
+          <span className="card-header">Mr Tilahun on Covid-19</span>
           <span className="card-text card-text-small">
             The Covid-19 Pandemic has...
           </span>
