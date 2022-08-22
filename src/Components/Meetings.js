@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import MoreButton from "./MoreButton";
 import meetings from "../Assets/JSON/Meetings.json";
-import { Modal, Input, Calendar } from "antd";
+import { Modal, Input, Calendar, Button, message } from "antd";
 
 import { getDateWithoutDay, getFullDate } from "./Modules";
 import TimePicker from "react-time-picker";
@@ -16,12 +15,33 @@ export default function Meetings() {
   const [meetingStart, setMeetingStart] = useState("10:00");
   const [meetingEnd, setMeetingEnd] = useState("12:00");
 
-  useEffect(() => {
-    console.log(meetingEnd);
-  }, [meetingEnd]);
   const onMeetingDateChange = (value) => {
     const date = value.format("YYYY-MM-DD");
+    console.log(date);
     setMeetingDate(getDateWithoutDay(date));
+  };
+  const createMeeting = () => {
+    if (
+      meetingDate === "" ||
+      meetingEnd === null ||
+      meetingStart === null ||
+      meetingTitle === ""
+    ) {
+      message.info("Please fill out meeting information");
+    } else {
+      //Create Meeting
+      const meeting = {
+        title: meetingTitle,
+        date: meetingDate,
+        time: `${meetingStart} - ${meetingEnd}`,
+      };
+      setMyMeetings([...myMeetings, meeting]);
+      message.success("Meeting created!");
+      setModalVisible(false);
+      setMeetingStart("10:00");
+      setMeetingEnd("12:00");
+      setMeetingTitle("");
+    }
   };
   return (
     <div className="card-default card-padding meeting-card flex-column">
@@ -32,7 +52,7 @@ export default function Meetings() {
         </span>
       </div>
       <hr className="hr-default" />
-      {myMeetings.map((meeting, index) => {
+      {myMeetings.slice(0, 2).map((meeting, index) => {
         return (
           <div className="meeting flex-row">
             <div className="card-text card-text-large">{meeting.title}</div>
@@ -93,6 +113,15 @@ export default function Meetings() {
             <TimePicker onChange={setMeetingEnd} value={meetingEnd} />
           </div>
         </div>
+        <br />
+        <Button
+          type="primary"
+          block
+          style={{ width: "100%" }}
+          onClick={createMeeting}
+        >
+          Create Meeting
+        </Button>
       </Modal>
       <div className="more-button-container">
         <button className="more-button" onClick={() => setModalVisible(true)}>

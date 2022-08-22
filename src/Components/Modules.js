@@ -58,5 +58,9 @@ function getDateWithoutDay(date) {
   const fullDateString = `${dateNum} ${month} ${year}`;
   return fullDateString;
 }
+function getDaysBetween(d1, d2) {
+  const numberOfDaysBetween = (d1 - d2) / 1000 / 60 / 60;
 
-export { getFullDate, getFullTime, getDateWithoutDay };
+  return Math.floor(numberOfDaysBetween);
+}
+export { getFullDate, getFullTime, getDateWithoutDay, getDaysBetween };
