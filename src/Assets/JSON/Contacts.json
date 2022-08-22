@@ -1,0 +1,24 @@
+{
+  "contacts": [
+    {
+      "name": "Catherine Jacobs",
+      "key": "key1",
+      "online": false
+    },
+    {
+      "name": "Petrus Shikongo",
+      "key": "key2",
+      "online": true
+    },
+    {
+      "name": "Jan Van Der Westhuizen",
+      "key": "key3",
+      "online": true
+    },
+    {
+      "name": "Latoya Matthews",
+      "key": "key4",
+      "online": true
+    }
+  ]
+}

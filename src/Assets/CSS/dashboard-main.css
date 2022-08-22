@@ -33,6 +33,10 @@
 .dashboard-main-right-nav-item {
   font-family: "Poppins", sans-serif;
   color: #e6e6e6;
+  cursor: pointer;
+}
+.dashboard-main-right-nav-item:hover {
+  color: white;
 }
 .dashboard-main-right-image {
   height: 82%;

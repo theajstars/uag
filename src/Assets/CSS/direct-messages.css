@@ -11,6 +11,7 @@
 }
 .contact {
   width: 100%;
+  cursor: pointer;
   align-items: center;
 }
 .contact-badge {

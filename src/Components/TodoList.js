@@ -20,12 +20,15 @@ export default function TodoList() {
     if (todoDate === "" || todoTitle === "" || todoSubHead === "") {
       message.info("Please fill out todo details");
     } else {
+      var date = new Date(todoDate);
+
       //Create Todo
       const todo = {
         title: todoTitle,
         subtext: todoSubHead,
-        date: todoDate,
+        due: Date.parse(date),
       };
+      console.log(todo);
       setMyTodos([...myTodos, todo]);
       message.success("Todo created!");
       setTodoTitle("");

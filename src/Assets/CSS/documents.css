@@ -9,6 +9,10 @@
   align-items: center;
   border-bottom: 1px solid #bdbcbc;
   padding: 10px 0px;
+  cursor: pointer;
+}
+.document:hover {
+  background-color: rgb(230, 225, 225);
 }
 .document-icon {
   color: rgb(184, 55, 55);

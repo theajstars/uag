@@ -12,33 +12,17 @@ import Documents from "./Components/Documents";
 import Notices from "./Components/Notices";
 import Events from "./Components/Events";
 import DatePicker from "./Components/DatePicker";
+import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
+import { useEffect } from "react";
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      {/* <Container maxWidth="xl"> */}
-      <div className="app-container">
-        <div className="grid-item">
-          <Profile />
-          <Meetings />
-          <TodoList />
-        </div>
-        <div className="grid-item">
-          <DashboardMain />
-          <div className="flex-row dm-documents-row">
-            <DirectMessages />
-            <Documents />
-          </div>
-        </div>
-        <div className="grid-item grid-item-last">
-          <Notices />
-          <Events />
-          <DatePicker />
-        </div>
-      </div>
-    </>
-  );
+  const token = Cookies.get("token");
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate(token ? "/dashboard" : "/login", { replace: true });
+  }, []);
+  return <></>;
 }
 
 export default App;

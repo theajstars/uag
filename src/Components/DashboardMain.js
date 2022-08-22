@@ -1,4 +1,5 @@
 import MoreButton from "./MoreButton";
+import { Link } from "react-router-dom";
 import Buildings from "../Assets/IMG/buildings.jpg";
 export default function DashboardMain() {
   return (
@@ -28,10 +29,18 @@ export default function DashboardMain() {
       </div>
       <div className="dashboard-main-right flex-column">
         <div className="dashboard-main-right-nav flex-row">
-          <div className="dashboard-main-right-nav-item">News</div>
-          <div className="dashboard-main-right-nav-item">Internal Affairs</div>
-          <div className="dashboard-main-right-nav-item">Programmes</div>
-          <div className="dashboard-main-right-nav-item">Messages</div>
+          <Link to="/dashboard" className="dashboard-main-right-nav-item">
+            News
+          </Link>
+          <Link to="/dashboard" className="dashboard-main-right-nav-item">
+            Internal Affairs
+          </Link>
+          <Link to="/dashboard" className="dashboard-main-right-nav-item">
+            Programmes
+          </Link>
+          <Link to="/dashboard" className="dashboard-main-right-nav-item">
+            Messages
+          </Link>
         </div>
         <img src={Buildings} alt="" className="dashboard-main-right-image" />
       </div>
