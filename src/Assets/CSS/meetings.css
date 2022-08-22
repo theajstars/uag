@@ -9,6 +9,16 @@
   align-items: center;
   border-bottom: 1px solid #bdbcbc;
 }
+.set-meeting-time {
+  justify-content: space-between;
+}
+@media screen and (max-width: 400px) {
+  div.set-meeting-time {
+    flex-direction: column;
+    align-items: center;
+    height: 140px;
+  }
+}
 .meeting-details {
   align-items: flex-end;
 }

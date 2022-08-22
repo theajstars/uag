@@ -11,6 +11,7 @@
 @import url("./documents.css");
 @import url("./events.css");
 @import url("./datepicker.css");
+@import url("./modified_ant.css");
 
 body {
   background-color: #f2f2f2;
