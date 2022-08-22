@@ -40,7 +40,12 @@ export default function TodoList() {
     <div className="card-default card-padding todo-card flex-column">
       <div className="flex-row card-header-row">
         <span className="card-header">To-Do List</span>
-        <span className="add-button">
+        <span
+          className="add-button"
+          onClick={() => {
+            setModalVisible(true);
+          }}
+        >
           <i className="far fa-plus"></i>
         </span>
       </div>
